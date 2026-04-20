@@ -1,12 +1,28 @@
 # A3BigData
 
+## Passo a Passo para a execução do código
+
 abra o terminal na pasta raiz e digite:
 ```bash
-pip install -r requirements.txt
+python start.py
 ```
 
-após isso, abra o terminal na pasta raiz e digite esse comando:
+## Arquitetura de pastas
 
-```bash
-python utils/download.py
-```
+Pasta Raiz/
+│
+├── utils/
+│   ├── download.py      # O script que baixa os dados do Drive (caso não tenha os datasets)
+|   ├── api_sidra.py     # Arquivo de script de chamada da API SIDRA para puxar o dataset
+|   └── extracao_sim.py  # Arquivo de script para extração do dataset SIM através de sql
+│
+├── datasets/            # Pasta criada automaticamente para armazenar os datasets (caso já não exista) 
+│
+├── venv/                # Ambiente virtual criado automaticamente
+│
+├── requirements.txt     # Lista de dependências (pandas, gdown, etc)
+├── readme.md            
+├── start.py             # Código inicial que inicia toda a aplicação
+└── main.py              # Código Principal
+
+
